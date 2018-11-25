@@ -1,0 +1,48 @@
+enum E$group$ {
+    $nameCapitalized$ = "$nameCapitalized$",
+    $nameCapitalized$_IN_PROGRESS = "$nameCapitalized$_IN_PROGRESS",
+    $nameCapitalized$_ERROR = "$nameCapitalized$_ERROR",
+    $nameCapitalized$_SUCCESS = "$nameCapitalized$_SUCCESS",
+}$END$
+
+export interface I$group$$name$ {
+    type: E$group$.$nameCapitalized$;
+}
+
+export interface I$group$$name$InProgress {
+    type: E$group$.$nameCapitalized$_IN_PROGRESS;
+}
+
+export interface I$group$$name$Error {
+    type: E$group$.$nameCapitalized$_ERROR;
+    error: $errorType$;
+}
+
+export interface I$group$$name$Success {
+    type: E$group$.$nameCapitalized$_SUCCESS;
+}
+
+export const create$group$$name$ = (): I$group$$name$ => {
+    return {
+        type: E$group$.$nameCapitalized$,
+    };
+};
+
+export const create$group$$name$InProgress = (): I$group$$name$InProgress => {
+    return {
+        type: E$group$.$nameCapitalized$_IN_PROGRESS,
+    };
+};
+
+export const create$group$$name$Error = (error: $errorType$): I$group$$name$Error => {
+    return {
+        type: E$group$.$nameCapitalized$_ERROR,
+        error,
+    };
+};
+
+export const create$group$$name$Success = (): I$group$$name$Success => {
+    return {
+        type: E$group$.$nameCapitalized$_SUCCESS,
+    };
+};
